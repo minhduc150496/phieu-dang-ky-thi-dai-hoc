@@ -23,6 +23,10 @@ body {
 	padding: 15px 0 0 0;
 }
 
+textarea {
+	resize: none;
+}
+
 .panel-container {
 	padding-bottom: 40px;
 }
@@ -251,7 +255,7 @@ select {
 		max-height: none;
 	}
 	.tab-content {
-		padding-bottom: 50px;
+		/*padding-bottom: 50px;*/
 	}
 	.tab-content .tab-control {
 		position: absolute;
@@ -308,3 +312,57 @@ select {
 	color: white;
 	font-weight: bold;
 }
+
+.ss-q-help {	
+    color: white;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.ss-current-page {
+	text-align: center;
+	color: white;
+}
+
+.nav-tabs {
+	margin-top: 20px;
+}
+
+.tab-pane-household .ss-item {
+	margin: 0;
+}
+
+.tab-pane-household .ss-choice-item {
+	padding-bottom: 0;
+}
+
+.ss-form-entry .ss-q-short {
+	width: 100%;
+}
+
+.ss-choice-item.ss-choice-right label input:not(:checked) + span, 
+.ss-choice-item.ss-choice-right label input:checked + span {
+	padding-right: 40px;
+	padding-left: 0;
+}
+
+.ss-choice-item.ss-choice-right label input:not(:checked) + span:before, 
+.ss-choice-item.ss-choice-right label input:checked + span:before {
+    left: 85px;
+}
+
+.ss-choice-item label input:not(:checked) + span:after,
+.ss-choice-item label input:checked + span:after {
+	left: 94px;
+}
+
+.ss-choice-languages {
+	display: inline-block;
+	margin-left: 14px;
+}
+/*
+.tab-pane-subjects .ss-choice-item {
+	margin-right: 10px;
+	display: inline-block;
+}*/

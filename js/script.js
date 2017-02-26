@@ -2,18 +2,18 @@ $(document).ready(function () {
 	//	setDisplayStatus();
 	// [EVENT] 
 	$('.tab-control button').click(function () {
-		console.log('--- tab-control button: CLICK');
 		var me = $(this),
 			role = me.attr('data-role'),
 			currTab = $('.nav-tabs .active');
-		var isValidForm = validateSurveyForm();
+		var isValidForm = validateSurveyForm() || true;
+		console.log('--- tab-control button: CLICK' + role + isValidForm);
 
 		if (role == 'prev-tab' && !currTab.is(':first-child')) {
-			currTab.prev().find('a').tab('show');
 			console.log('----------------prev-tab');
+			currTab.prev().find('a').tab('show');
 		} else if (role == 'next-tab' && !currTab.is(':last-child') && isValidForm) {
-			currTab.next().find('a').tab('show');
 			console.log('----------------next-tab');
+			currTab.next().find('a').tab('show');
 		}
 		setDisplayStatus();
 	});
